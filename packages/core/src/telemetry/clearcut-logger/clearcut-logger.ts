@@ -103,6 +103,7 @@ export class ClearcutLogger {
         path: '/log',
         method: 'POST',
         headers: { 'Content-Length': Buffer.byteLength(body) },
+        timeout: 5000, // 5 second timeout
       };
       const bufs: Buffer[] = [];
       const req = https.request(options, (res) => {
@@ -111,6 +112,20 @@ export class ClearcutLogger {
           resolve(Buffer.concat(bufs));
         });
       });
+      
+      // Handle timeout
+      req.on('timeout', () => {
+        req.destroy();
+        const timeoutError = new Error('Request timeout after 5 seconds') as Error & { code: string };
+        timeoutError.code = 'ETIMEDOUT';
+        if (this.config?.getDebugMode()) {
+          console.log('Clearcut request timeout');
+        }
+        // Add the events back to the front of the queue to be retried.
+        this.events.unshift(...eventsToSend);
+        reject(timeoutError);
+      });
+      
       req.on('error', (e) => {
         if (this.config?.getDebugMode()) {
           console.log('Clearcut POST request error: ', e);
@@ -128,6 +143,13 @@ export class ClearcutLogger {
         console.error('Error flushing log events:', error);
         return {};
       }
+    }).catch((error: unknown) => {
+      // Catch any errors to prevent unhandled promise rejections
+      if (this.config?.getDebugMode()) {
+        console.error('Error in flushToClearcut:', error);
+      }
+      // Return empty response on error
+      return {};
     });
   }
 
