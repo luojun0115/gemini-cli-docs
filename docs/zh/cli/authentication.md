@@ -22,16 +22,22 @@ Gemini CLI 需要您通过 Google 的 AI 服务进行身份验证。在初始启
        source ~/.bashrc
        ```
 
-3. **使用 Google Workspace 登录**
+3. **<a id="workspace-gca"></a>使用 Google 登录（Workspace 的 Gemini Code Assist 或许可的 Code Assist 用户）：**
 
-   - 使用此选项登录 **Google Workspace 账户**。这是为企业和组织提供的付费服务，提供一套生产力工具，包括自定义电子邮件域（例如 your-name@your-company.com）、增强的安全功能和管理控制。这些账户通常由雇主或学校管理。
-     - Google Workspace 账户必须首先配置要使用的 Google Cloud 项目 ID，[启用 Gemini for Cloud API](https://cloud.google.com/gemini/docs/discover/set-up-gemini#enable-api) 并[配置访问权限](https://cloud.google.com/gemini/docs/discover/set-up-gemini#grant-iam)。您可以使用以下命令在当前 shell 会话中临时设置环境变量：
+   （更多信息，请参见：https://developers.google.com/gemini-code-assist/resources/faqs#gcp-project-requirement）
+
+   - 如果您属于以下情况，请使用此选项：
+
+     1. 您拥有 Google Workspace 账户。Google Workspace 是为企业和组织提供的付费服务，提供一套生产力工具，包括自定义电子邮件域（例如 your-name@your-company.com）、增强的安全功能和管理控制。这些账户通常由雇主或学校管理。
+     2. 您是许可的 Code Assist 用户。如果您之前购买了 Code Assist 许可证或通过 Google Developer Program 获得了许可证，就属于这种情况。
+
+   - 如果您属于上述类别之一，必须首先配置要使用的 Google Cloud 项目 ID，[启用 Gemini for Cloud API](https://cloud.google.com/gemini/docs/discover/set-up-gemini#enable-api) 并[配置访问权限](https://cloud.google.com/gemini/docs/discover/set-up-gemini#grant-iam)。您可以使用以下命令在当前 shell 会话中临时设置环境变量：
      ```bash
-     export GOOGLE_CLOUD_PROJECT_ID="YOUR_PROJECT_ID"
+     export GOOGLE_CLOUD_PROJECT="YOUR_PROJECT_ID"
      ```
      - 为了重复使用，您可以将环境变量添加到您的 `.env` 文件（位于项目目录或用户主目录）或您的 shell 配置文件（如 `~/.bashrc`、`~/.zshrc` 或 `~/.profile`）。例如，以下命令将环境变量添加到 `~/.bashrc` 文件：
      ```bash
-     echo 'export GOOGLE_CLOUD_PROJECT_ID="YOUR_PROJECT_ID"' >> ~/.bashrc
+     echo 'export GOOGLE_CLOUD_PROJECT="YOUR_PROJECT_ID"' >> ~/.bashrc
      source ~/.bashrc
      ```
    - 在启动期间，Gemini CLI 会将您引导到网页进行身份验证。一旦通过身份验证，您的凭据将在本地缓存，以便在后续运行时可以跳过网页登录。
