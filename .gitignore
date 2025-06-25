@@ -36,3 +36,14 @@ packages/*/coverage/
 # Generated files
 packages/cli/src/generated/
 .integration-tests/
+
+# Claude Code files and directories
+.claude/
+CLAUDE.md
+CLAUDE.local.md
+*.claude.md
+
+# VitePress generated files
+docs/.vitepress/dist/
+docs/.vitepress/cache/
+docs/node_modules/
