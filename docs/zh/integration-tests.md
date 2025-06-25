@@ -20,7 +20,7 @@ npm run test:e2e
 
 ## 运行特定测试集
 
-要运行测试文件的子集，您可以使用 `npm run <integration test command> <file_name1> ....`，其中 `<integration test command>` 是 `test:e2e` 或 `test:integration*` 之一，`<file_name>` 是 `integration-tests/` 目录中的任何 `.test.js` 文件。例如，以下命令运行 `list_directory.test.js` 和 `write_file.test.js`：
+要运行测试文件的子集，您可以使用 `npm run &lt;integration test command&gt; &lt;file_name1&gt; ....`，其中 `&lt;integration test command&gt;` 是 `test:e2e` 或 `test:integration*` 之一，`&lt;file_name&gt;` 是 `integration-tests/` 目录中的任何 `.test.js` 文件。例如，以下命令运行 `list_directory.test.js` 和 `write_file.test.js`：
 
 ```bash
 npm run test:e2e list_directory write_file
@@ -92,9 +92,9 @@ npm run test:integration:sandbox:none -- --verbose
 详细输出被格式化以清晰标识日志来源：
 
 ```
---- TEST: <file-name-without-js>:<test-name> ---
+--- TEST: &lt;file-name-without-js&gt;:&lt;test-name&gt; ---
 ... gemini 命令的输出 ...
---- END TEST: <file-name-without-js>:<test-name> ---
+--- END TEST: &lt;file-name-without-js&gt;:&lt;test-name&gt; ---
 ```
 
 ## 代码检查和格式化
@@ -123,9 +123,9 @@ npm run lint --fix
 
 ```
 .integration-tests/
-└── <run-id>/
-    └── <test-file-name>.test.js/
-        └── <test-case-name>/
+└── &lt;run-id&gt;/
+    └── &lt;test-file-name&gt;.test.js/
+        └── &lt;test-case-name&gt;/
             ├── output.log
             └── ...其他测试产物...
 ```
