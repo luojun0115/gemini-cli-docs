@@ -20,7 +20,7 @@ npm run test:e2e
 
 ## Running a specific set of tests
 
-To run a subset of test files, you can use `npm run <integration test command> <file_name1> ....` where <integration test command> is either `test:e2e` or `test:integration*` and `<file_name>` is any of the `.test.js` files in the `integration-tests/` directory. For example, the following command runs `list_directory.test.js` and `write_file.test.js`:
+To run a subset of test files, you can use `npm run &lt;integration test command&gt; &lt;file_name1&gt; ....` where `&lt;integration test command&gt;` is either `test:e2e` or `test:integration*` and `&lt;file_name&gt;` is any of the `.test.js` files in the `integration-tests/` directory. For example, the following command runs `list_directory.test.js` and `write_file.test.js`:
 
 ```bash
 npm run test:e2e list_directory write_file
@@ -92,9 +92,9 @@ When using `--verbose` and `--keep-output` in the same command, the output is st
 The verbose output is formatted to clearly identify the source of the logs:
 
 ```
---- TEST: <file-name-without-js>:<test-name> ---
+--- TEST: &lt;file-name-without-js&gt;:&lt;test-name&gt; ---
 ... output from the gemini command ...
---- END TEST: <file-name-without-js>:<test-name> ---
+--- END TEST: &lt;file-name-without-js&gt;:&lt;test-name&gt; ---
 ```
 
 ## Linting and formatting
@@ -123,9 +123,9 @@ This structure makes it easy to locate the artifacts for a specific test run, fi
 
 ```
 .integration-tests/
-└── <run-id>/
-    └── <test-file-name>.test.js/
-        └── <test-case-name>/
+└── &lt;run-id&gt;/
+    └── &lt;test-file-name&gt;.test.js/
+        └── &lt;test-case-name&gt;/
             ├── output.log
             └── ...other test artifacts...
 ```

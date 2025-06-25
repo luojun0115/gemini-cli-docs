@@ -30,56 +30,56 @@ Gemini CLI 带有一系列预定义主题，您可以在 Gemini CLI 中使用 `/
 
 ### 主题持久性
 
-选择的主题保存在 Gemini CLI 的[配置](./docs/cli/configuration.md)中，因此您的偏好在会话之间会被记住。
+选择的主题保存在 Gemini CLI 的[配置](./configuration.md)中，因此您的偏好在会话之间会被记住。
 
 ## 深色主题
 
 ### ANSI
 
-<img src="../assets/theme-ansi.png" alt="ANSI 主题" width="600" />
+<img src="../../assets/theme-ansi.png" alt="ANSI 主题" width="600" />
 
 ### Atom OneDark
 
-<img src="../assets/theme-atom-one.png" alt="Atom One 主题" width="600">
+<img src="../../assets/theme-atom-one.png" alt="Atom One 主题" width="600">
 
 ### Ayu
 
-<img src="../assets/theme-ayu.png" alt="Ayu 主题" width="600">
+<img src="../../assets/theme-ayu.png" alt="Ayu 主题" width="600">
 
 ### Default
 
-<img src="../assets/theme-default.png" alt="Default 主题" width="600">
+<img src="../../assets/theme-default.png" alt="Default 主题" width="600">
 
 ### Dracula
 
-<img src="../assets/theme-dracula.png" alt="Dracula 主题" width="600">
+<img src="../../assets/theme-dracula.png" alt="Dracula 主题" width="600">
 
 ### GitHub
 
-<img src="../assets/theme-github.png" alt="GitHub 主题" width="600">
+<img src="../../assets/theme-github.png" alt="GitHub 主题" width="600">
 
 ## 浅色主题
 
 ### ANSI Light
 
-<img src="../assets/theme-ansi-light.png" alt="ANSI Light 主题" width="600">
+<img src="../../assets/theme-ansi-light.png" alt="ANSI Light 主题" width="600">
 
 ### Ayu Light
 
-<img src="../assets/theme-ayu-light.png" alt="Ayu Light 主题" width="600">
+<img src="../../assets/theme-ayu-light.png" alt="Ayu Light 主题" width="600">
 
 ### Default Light
 
-<img src="../assets/theme-default-light.png" alt="Default Light 主题" width="600">
+<img src="../../assets/theme-default-light.png" alt="Default Light 主题" width="600">
 
 ### GitHub Light
 
-<img src="../assets/theme-github-light.png" alt="GitHub Light 主题" width="600">
+<img src="../../assets/theme-github-light.png" alt="GitHub Light 主题" width="600">
 
 ### Google Code
 
-<img src="../assets/theme-google-light.png" alt="Google Code 主题" width="600">
+<img src="../../assets/theme-google-light.png" alt="Google Code 主题" width="600">
 
 ### Xcode
 
-<img src="../assets/theme-xcode-light.png" alt="Xcode Light 主题" width="600">
+<img src="../../assets/theme-xcode-light.png" alt="Xcode Light 主题" width="600">
