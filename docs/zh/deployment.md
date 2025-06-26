@@ -38,7 +38,7 @@
   您可以直接运行发布的沙箱镜像。这对于您只有 Docker 并想要运行 CLI 的环境很有用。
   ```bash
   # 运行发布的沙箱镜像
-  docker run --rm -it us-docker.pkg.dev/gemini-code-dev/gemini-cli/sandbox:0.1.1
+  docker run --rm -it us-docker.pkg.dev/gemini-code-dev/gemini-cli/sandbox:0.1.5
   ```
 - **使用 `--sandbox` 标志：**
   如果您已经在本地安装了 Gemini CLI（使用上述标准安装），您可以指示它在沙箱容器内运行。
