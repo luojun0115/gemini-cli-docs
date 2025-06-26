@@ -2,6 +2,14 @@
 
 本指南提供常见问题的解决方案和调试技巧。
 
+## 身份验证
+
+- **错误：`Failed to login. Message: Request contains an invalid argument`**
+
+  - 拥有 Google Workspace 账户或与 Gmail 账户关联的 Google Cloud 账户的用户可能无法激活 Google Code Assist 计划的免费层级。
+  - 对于 Google Cloud 账户，您可以通过将 `GOOGLE_CLOUD_PROJECT` 设置为您的项目 ID 来解决此问题。
+  - 您也可以从 [AI Studio](http://aistudio.google.com/app/apikey) 获取 API 密钥，其中还包括单独的免费层级。
+
 ## 常见问题解答（FAQ）
 
 - **问：如何将 Gemini CLI 更新到最新版本？**

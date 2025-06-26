@@ -42,13 +42,13 @@ Gemini CLI 使用 `settings.json` 文件进行持久配置。这些文件有两�
 - **`bugCommand`**（对象）：
 
   - **描述：** 覆盖 `/bug` 命令的默认 URL。
-  - **默认值：** `"urlTemplate": "https://github.com/google-gemini/gemini-cli/issues/new?template=bug_report.md&title={title}&body={body}"`
+  - **默认值：** `"urlTemplate": "https://github.com/google-gemini/gemini-cli/issues/new?template=bug_report.yml&title={title}&info={info}"`
   - **属性：**
-    - **`urlTemplate`**（字符串）：可以包含 `{title}` 和 `{body}` 占位符的 URL。
+    - **`urlTemplate`**（字符串）：可以包含 `{title}` 和 `{info}` 占位符的 URL。
   - **示例：**
     ```json
     "bugCommand": {
-      "urlTemplate": "https://bug.example.com/new?title={title}&body={body}"
+      "urlTemplate": "https://bug.example.com/new?title={title}&info={info}"
     }
     ```
 
@@ -427,6 +427,3 @@ BUILD_SANDBOX=1 gemini -s
   "usageStatisticsEnabled": false
 }
 ```
-
-**隐私政策：**
-收集的数据受 [Google 隐私政策](https://policies.google.com/privacy)约束。

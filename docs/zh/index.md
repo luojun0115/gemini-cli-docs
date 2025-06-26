@@ -32,5 +32,6 @@ Gemini CLI 将 Gemini 模型的功能带到您的终端中，提供交互式的�
   - **[内存工具](./tools/memory.md)：** `save_memory` 工具的文档。
 - **[贡献与开发指南](../CONTRIBUTING.md)：** 为贡献者和开发者提供的信息，包括设置、构建、测试和编码约定。
 - **[故障排除指南](./troubleshooting.md)：** 查找常见问题的解决方案和常见问题解答。
+- **[服务条款与隐私声明](./tos-privacy.md)：** 了解适用于您使用 Gemini CLI 的服务条款和隐私政策。
 
 我们希望这份文档能帮助您充分利用 Gemini CLI！

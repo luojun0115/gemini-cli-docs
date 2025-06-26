@@ -79,7 +79,8 @@ export default defineConfig({
                 { text: '检查点', link: '/zh/checkpointing' },
                 { text: '遥测', link: '/zh/telemetry' },
                 { text: '集成测试', link: '/zh/integration-tests' },
-                { text: '故障排除', link: '/zh/troubleshooting' }
+                { text: '故障排除', link: '/zh/troubleshooting' },
+                { text: '服务条款与隐私', link: '/zh/tos-privacy' }
               ]
             }
           ]
@@ -152,7 +153,8 @@ export default defineConfig({
             { text: 'Checkpointing', link: '/checkpointing' },
             { text: 'Telemetry', link: '/telemetry' },
             { text: 'Integration Tests', link: '/integration-tests' },
-            { text: 'Troubleshooting', link: '/troubleshooting' }
+            { text: 'Troubleshooting', link: '/troubleshooting' },
+            { text: 'Terms of Service & Privacy', link: '/tos-privacy' }
           ]
         }
       ]
