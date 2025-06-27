@@ -2,25 +2,20 @@ import { defineConfig } from 'vitepress'
 
 export default defineConfig({
   title: 'Gemini CLI',
-  description: 'A command-line AI workflow tool that connects to Google\'s Gemini API',
+  description: '连接到 Google Gemini API 的命令行 AI 工作流工具',
   
   base: '/',
   
   locales: {
     root: {
-      label: 'English',
-      lang: 'en',
-      title: 'Gemini CLI',
-      description: 'A command-line AI workflow tool that connects to Google\'s Gemini API'
-    },
-    zh: {
       label: '简体中文',
       lang: 'zh-CN',
       title: 'Gemini CLI',
       description: '连接到 Google Gemini API 的命令行 AI 工作流工具',
       themeConfig: {
         nav: [
-          { text: '指南', link: '/zh/' },
+          { text: '首页', link: '/' },
+          { text: '指南', link: '/zh/guide' },
           { text: 'CLI', link: '/zh/cli/' },
           { text: '核心', link: '/zh/core/' },
           { text: '工具', link: '/zh/tools/' }
@@ -30,7 +25,8 @@ export default defineConfig({
             {
               text: '介绍',
               items: [
-                { text: '概览', link: '/zh/' },
+                { text: '首页', link: '/' },
+                { text: '概览', link: '/zh/guide' },
                 { text: '架构', link: '/zh/architecture' },
                 { text: '部署', link: '/zh/deployment' }
               ]
@@ -86,80 +82,89 @@ export default defineConfig({
           ]
         }
       }
+    },
+    en: {
+      label: 'English',
+      lang: 'en',
+      title: 'Gemini CLI',
+      description: 'A command-line AI workflow tool that connects to Google\'s Gemini API',
+      link: '/en/',
+      themeConfig: {
+        nav: [
+          { text: 'Home', link: '/en/' },
+          { text: 'Guide', link: '/guide' },
+          { text: 'CLI', link: '/cli/' },
+          { text: 'Core', link: '/core/' },
+          { text: 'Tools', link: '/tools/' }
+        ],
+        sidebar: {
+          '/': [
+            {
+              text: 'Introduction',
+              items: [
+                { text: 'Home', link: '/en/' },
+                { text: 'Overview', link: '/guide' },
+                { text: 'Architecture', link: '/architecture' },
+                { text: 'Deployment', link: '/deployment' }
+              ]
+            },
+            {
+              text: 'CLI',
+              collapsed: false,
+              items: [
+                { text: 'Getting Started', link: '/cli/' },
+                { text: 'Commands', link: '/cli/commands' },
+                { text: 'Authentication', link: '/cli/authentication' },
+                { text: 'Configuration', link: '/cli/configuration' },
+                { text: 'Themes', link: '/cli/themes' },
+                { text: 'Token Caching', link: '/cli/token-caching' },
+                { text: 'Tutorials', link: '/cli/tutorials' }
+              ]
+            },
+            {
+              text: 'Core API',
+              collapsed: false,
+              items: [
+                { text: 'Overview', link: '/core/' },
+                { text: 'Tools API', link: '/core/tools-api' }
+              ]
+            },
+            {
+              text: 'Tools',
+              collapsed: false,
+              items: [
+                { text: 'Overview', link: '/tools/' },
+                { text: 'File System', link: '/tools/file-system' },
+                { text: 'Shell', link: '/tools/shell' },
+                { text: 'Web Fetch', link: '/tools/web-fetch' },
+                { text: 'Web Search', link: '/tools/web-search' },
+                { text: 'Memory', link: '/tools/memory' },
+                { text: 'Multi-file', link: '/tools/multi-file' },
+                { text: 'MCP Server', link: '/tools/mcp-server' }
+              ]
+            },
+            {
+              text: 'Advanced',
+              collapsed: true,
+              items: [
+                { text: 'Extension', link: '/extension' },
+                { text: 'Sandbox', link: '/sandbox' },
+                { text: 'Checkpointing', link: '/checkpointing' },
+                { text: 'Telemetry', link: '/telemetry' },
+                { text: 'Integration Tests', link: '/integration-tests' },
+                { text: 'Troubleshooting', link: '/troubleshooting' },
+                { text: 'Terms of Service & Privacy', link: '/tos-privacy' }
+              ]
+            }
+          ]
+        }
+      }
     }
   },
   
   themeConfig: {
     logo: '/logo.svg',
     
-    nav: [
-      { text: 'Guide', link: '/' },
-      { text: 'CLI', link: '/cli/' },
-      { text: 'Core', link: '/core/' },
-      { text: 'Tools', link: '/tools/' }
-    ],
-
-    sidebar: {
-      '/': [
-        {
-          text: 'Introduction',
-          items: [
-            { text: 'Overview', link: '/' },
-            { text: 'Architecture', link: '/architecture' },
-            { text: 'Deployment', link: '/deployment' }
-          ]
-        },
-        {
-          text: 'CLI',
-          collapsed: false,
-          items: [
-            { text: 'Getting Started', link: '/cli/' },
-            { text: 'Commands', link: '/cli/commands' },
-            { text: 'Authentication', link: '/cli/authentication' },
-            { text: 'Configuration', link: '/cli/configuration' },
-            { text: 'Themes', link: '/cli/themes' },
-            { text: 'Token Caching', link: '/cli/token-caching' },
-            { text: 'Tutorials', link: '/cli/tutorials' }
-          ]
-        },
-        {
-          text: 'Core API',
-          collapsed: false,
-          items: [
-            { text: 'Overview', link: '/core/' },
-            { text: 'Tools API', link: '/core/tools-api' }
-          ]
-        },
-        {
-          text: 'Tools',
-          collapsed: false,
-          items: [
-            { text: 'Overview', link: '/tools/' },
-            { text: 'File System', link: '/tools/file-system' },
-            { text: 'Shell', link: '/tools/shell' },
-            { text: 'Web Fetch', link: '/tools/web-fetch' },
-            { text: 'Web Search', link: '/tools/web-search' },
-            { text: 'Memory', link: '/tools/memory' },
-            { text: 'Multi-file', link: '/tools/multi-file' },
-            { text: 'MCP Server', link: '/tools/mcp-server' }
-          ]
-        },
-        {
-          text: 'Advanced',
-          collapsed: true,
-          items: [
-            { text: 'Extension', link: '/extension' },
-            { text: 'Sandbox', link: '/sandbox' },
-            { text: 'Checkpointing', link: '/checkpointing' },
-            { text: 'Telemetry', link: '/telemetry' },
-            { text: 'Integration Tests', link: '/integration-tests' },
-            { text: 'Troubleshooting', link: '/troubleshooting' },
-            { text: 'Terms of Service & Privacy', link: '/tos-privacy' }
-          ]
-        }
-      ]
-    },
-
     socialLinks: [
       { icon: 'github', link: 'https://github.com/google-gemini/gemini-cli' }
     ],

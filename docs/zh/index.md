@@ -1,37 +1,66 @@
-# 欢迎使用 Gemini CLI 文档
+---
+layout: home
 
-本文档提供了安装、使用和开发 Gemini CLI 的全面指南。该工具让您可以通过命令行界面与 Gemini 模型进行交互。
+hero:
+  name: Gemini CLI
+  text: AI 驱动的命令行工具
+  tagline: 连接您的工具，理解您的代码，加速您的工作流程
+  actions:
+    - theme: brand
+      text: 中文文档
+      link: /zh/guide
+    - theme: alt
+      text: English Documentation
+      link: /guide
 
-## 概述
+features:
+  - icon: 🚀
+    title: 快速强大
+    details: 查询和编辑超出 Gemini 1M token 上下文窗口的大型代码库
+  - icon: 🎨
+    title: 多模态
+    details: 使用 Gemini 的多模态能力从 PDF 或草图生成新应用
+  - icon: 🔧
+    title: 可扩展
+    details: 使用工具和 MCP 服务器连接新功能
+  - icon: 🔍
+    title: Google 搜索
+    details: 使用内置的 Google 搜索工具增强您的查询
+---
 
-Gemini CLI 将 Gemini 模型的功能带到您的终端中，提供交互式的读取-求值-打印循环 (REPL) 环境。Gemini CLI 由客户端应用程序 (`packages/cli`) 组成，它与本地服务器 (`packages/core`) 通信，后者管理对 Gemini API 及其 AI 模型的请求。Gemini CLI 还包含各种工具，用于执行文件系统操作、运行 shell 和 web 获取等任务，这些都由 `packages/core` 管理。
+## 🔄 上游最新更新
 
-## 文档导航
+::: info 版本状态
+- **当前版本**: 0.1.5
+- **分支状态**: 已同步至最新 ✅
+- **文档**: 完全同步，支持中英双语
+:::
 
-本文档分为以下几个部分：
+### 最近同步 (2025-06-27)
 
-- **[执行和部署](./deployment.md)：** 运行 Gemini CLI 的信息。
-- **[架构概览](./architecture.md)：** 了解 Gemini CLI 的高层设计，包括其组件及其交互方式。
-- **CLI 使用：** `packages/cli` 的文档。
-  - **[CLI 介绍](./cli/index.md)：** 命令行界面概览。
-  - **[命令](./cli/commands.md)：** 可用 CLI 命令的描述。
-  - **[配置](./cli/configuration.md)：** CLI 配置信息。
-  - **[检查点](./checkpointing.md)：** 检查点功能文档。
-  - **[扩展](./extension.md)：** 如何使用新功能扩展 CLI。
-  - **[遥测](./telemetry.md)：** CLI 中遥测的概述。
-- **核心详情：** `packages/core` 的文档。
-  - **[核心介绍](./core/index.md)：** 核心组件概览。
-  - **[工具 API](./core/tools-api.md)：** 关于核心如何管理和公开工具的信息。
-- **工具：**
-  - **[工具概览](./tools/index.md)：** 可用工具的概述。
-  - **[文件系统工具](./tools/file-system.md)：** `read_file` 和 `write_file` 工具的文档。
-  - **[多文件读取工具](./tools/multi-file.md)：** `read_many_files` 工具的文档。
-  - **[Shell 工具](./tools/shell.md)：** `run_shell_command` 工具的文档。
-  - **[Web 获取工具](./tools/web-fetch.md)：** `web_fetch` 工具的文档。
-  - **[Web 搜索工具](./tools/web-search.md)：** `google_web_search` 工具的文档。
-  - **[内存工具](./tools/memory.md)：** `save_memory` 工具的文档。
-- **[贡献与开发指南](../CONTRIBUTING.md)：** 为贡献者和开发者提供的信息，包括设置、构建、测试和编码约定。
-- **[故障排除指南](./troubleshooting.md)：** 查找常见问题的解决方案和常见问题解答。
-- **[服务条款与隐私声明](./tos-privacy.md)：** 了解适用于您使用 Gemini CLI 的服务条款和隐私政策。
+从上游合并了 **5 个新提交**：
 
-我们希望这份文档能帮助您充分利用 Gemini CLI！
+#### 主要更改
+- ⚠️ **回滚**: 模型选择功能 (#1983) - 自动 Pro/Flash 切换已被撤销
+- ✨ **增强**: 为缺少子命令的情况添加清晰的错误消息 (#2019)
+- 💬 **改进**: 产品名称 "Gemini CLI" 现在显示在初始消息中 (#2037)
+- 📦 **添加**: 在 package.json 文件中添加 repository 字段 (#2032)
+- 🔧 **添加**: 发布前检查以提高发布质量 (#2052)
+
+---
+
+## 🌟 分支增强功能
+
+此分支通过以下方式提供附加价值：
+
+- **完整的中文翻译** 覆盖所有文档
+- **双语README** 支持便捷的语言切换
+- **实时同步** 上游更改
+- **详细的更新日志** 追踪所有上游修改
+
+---
+
+## 📋 完整的上游更新日志
+
+<!--@include: ./changelog-content.md-->
+

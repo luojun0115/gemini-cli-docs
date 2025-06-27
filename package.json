@@ -55,6 +55,7 @@
     "docs:build": "npm run build --workspace docs",
     "docs:preview": "npm run preview --workspace docs",
     "docs:serve": "npm run serve --workspace docs",
+    "docs:sync-changelog": "node scripts/sync-changelog.js",
     "prepublishOnly": "node scripts/prepublish.js"
   },
   "bin": {

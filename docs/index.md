@@ -1,37 +1,66 @@
-# Welcome to Gemini CLI documentation
+---
+layout: home
 
-This documentation provides a comprehensive guide to installing, using, and developing Gemini CLI. This tool lets you interact with Gemini models through a command-line interface.
+hero:
+  name: Gemini CLI
+  text: AI 驱动的命令行工具
+  tagline: 连接您的工具，理解您的代码，加速您的工作流程
+  actions:
+    - theme: brand
+      text: 中文文档
+      link: /zh/guide
+    - theme: alt
+      text: English Documentation
+      link: /guide
 
-## Overview
+features:
+  - icon: 🚀
+    title: 快速强大
+    details: 查询和编辑超出 Gemini 1M token 上下文窗口的大型代码库
+  - icon: 🎨
+    title: 多模态
+    details: 使用 Gemini 的多模态能力从 PDF 或草图生成新应用
+  - icon: 🔧
+    title: 可扩展
+    details: 使用工具和 MCP 服务器连接新功能
+  - icon: 🔍
+    title: Google 搜索
+    details: 使用内置的 Google 搜索工具增强您的查询
+---
 
-Gemini CLI brings the capabilities of Gemini models to your terminal in an interactive Read-Eval-Print Loop (REPL) environment. Gemini CLI consists of a client-side application (`packages/cli`) that communicates with a local server (`packages/core`), which in turn manages requests to the Gemini API and its AI models. Gemini CLI also contains a variety of tools for tasks such as performing file system operations, running shells, and web fetching, which are managed by `packages/core`.
+## 🔄 上游最新更新
 
-## Navigating the documentation
+::: info 版本状态
+- **当前版本**: 0.1.5
+- **分支状态**: 已同步至最新 ✅
+- **文档**: 完全同步，支持中英双语
+:::
 
-This documentation is organized into the following sections:
+### 最近同步 (2025-06-27)
 
-- **[Execution and Deployment](./deployment.md):** Information for running Gemini CLI.
-- **[Architecture Overview](./architecture.md):** Understand the high-level design of Gemini CLI, including its components and how they interact.
-- **CLI Usage:** Documentation for `packages/cli`.
-  - **[CLI Introduction](./cli/index.md):** Overview of the command-line interface.
-  - **[Commands](./cli/commands.md):** Description of available CLI commands.
-  - **[Configuration](./cli/configuration.md):** Information on configuring the CLI.
-  - **[Checkpointing](./checkpointing.md):** Documentation for the checkpointing feature.
-  - **[Extensions](./extension.md):** How to extend the CLI with new functionality.
-  - **[Telemetry](./telemetry.md):** Overview of telemetry in the CLI.
-- **Core Details:** Documentation for `packages/core`.
-  - **[Core Introduction](./core/index.md):** Overview of the core component.
-  - **[Tools API](./core/tools-api.md):** Information on how the core manages and exposes tools.
-- **Tools:**
-  - **[Tools Overview](./tools/index.md):** Overview of the available tools.
-  - **[File System Tools](./tools/file-system.md):** Documentation for the `read_file` and `write_file` tools.
-  - **[Multi-File Read Tool](./tools/multi-file.md):** Documentation for the `read_many_files` tool.
-  - **[Shell Tool](./tools/shell.md):** Documentation for the `run_shell_command` tool.
-  - **[Web Fetch Tool](./tools/web-fetch.md):** Documentation for the `web_fetch` tool.
-  - **[Web Search Tool](./tools/web-search.md):** Documentation for the `google_web_search` tool.
-  - **[Memory Tool](./tools/memory.md):** Documentation for the `save_memory` tool.
-- **[Contributing & Development Guide](../CONTRIBUTING.md):** Information for contributors and developers, including setup, building, testing, and coding conventions.
-- **[Troubleshooting Guide](./troubleshooting.md):** Find solutions to common problems and FAQs.
-- **[Terms of Service and Privacy Notice](./tos-privacy.md):** Information on the terms of service and privacy notices applicable to your use of Gemini CLI.
+从上游合并了 **5 个新提交**：
 
-We hope this documentation helps you make the most of the Gemini CLI!
+#### 主要更改
+- ⚠️ **回滚**: 模型选择功能 (#1983) - 自动 Pro/Flash 切换已被撤销
+- ✨ **增强**: 为缺少子命令的情况添加清晰的错误消息 (#2019)
+- 💬 **改进**: 产品名称 "Gemini CLI" 现在显示在初始消息中 (#2037)
+- 📦 **添加**: 在 package.json 文件中添加 repository 字段 (#2032)
+- 🔧 **添加**: 发布前检查以提高发布质量 (#2052)
+
+---
+
+## 🌟 分支增强功能
+
+此分支通过以下方式提供附加价值：
+
+- **完整的中文翻译** 覆盖所有文档
+- **双语README** 支持便捷的语言切换
+- **实时同步** 上游更改
+- **详细的更新日志** 追踪所有上游修改
+
+---
+
+## 📋 完整的上游更新日志
+
+<!--@include: ./zh/changelog-content.md-->
+
