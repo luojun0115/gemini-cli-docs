@@ -28,7 +28,3 @@ features:
     details: 使用内置的 Google 搜索工具增强您的查询
 ---
 
-
-
-<!--@include: ./zh/changelog-content.md-->
-
