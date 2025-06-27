@@ -15,7 +15,7 @@
   },
   "scripts": {
     "generate": "node scripts/generate-git-commit-info.js",
-    "build": "node scripts/build.js",
+    "build": "vitepress build",
     "build:sandbox": "node scripts/build_sandbox.js",
     "build:all": "npm run build && npm run build:sandbox",
     "clean": "node scripts/clean.js",
